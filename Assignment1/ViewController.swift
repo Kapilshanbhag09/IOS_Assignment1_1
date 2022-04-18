@@ -48,7 +48,7 @@ class ViewController: UITabBarController {
         
         tabBar.tintColor = .systemBlue
         tabBar.backgroundColor = .white
-        
+        tabBar.barTintColor = .systemGray
         setViewControllers([vc1,vc2,vc3,vc4,vc5], animated: true)
         print(tabBar.items)
         
