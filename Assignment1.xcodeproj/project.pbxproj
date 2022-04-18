@@ -16,6 +16,8 @@
 		2A96E6F2280D5BC60095511B /* Assignment1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96E6F1280D5BC60095511B /* Assignment1Tests.swift */; };
 		2A96E6FC280D5BC60095511B /* Assignment1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96E6FB280D5BC60095511B /* Assignment1UITests.swift */; };
 		2A96E6FE280D5BC60095511B /* Assignment1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96E6FD280D5BC60095511B /* Assignment1UITestsLaunchTests.swift */; };
+		2A96E748280D5C6D0095511B /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96E746280D5C6D0095511B /* SingleViewController.swift */; };
+		2A96E749280D5C6D0095511B /* SingleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A96E747280D5C6D0095511B /* SingleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2A96E6F7280D5BC60095511B /* Assignment1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A96E6FB280D5BC60095511B /* Assignment1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment1UITests.swift; sourceTree = "<group>"; };
 		2A96E6FD280D5BC60095511B /* Assignment1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A96E746280D5C6D0095511B /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
+		2A96E747280D5C6D0095511B /* SingleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				2A96E6E3280D5BC60095511B /* Assets.xcassets */,
 				2A96E6E5280D5BC60095511B /* LaunchScreen.storyboard */,
 				2A96E6E8280D5BC60095511B /* Info.plist */,
+				2A96E746280D5C6D0095511B /* SingleViewController.swift */,
+				2A96E747280D5C6D0095511B /* SingleViewController.xib */,
 			);
 			path = Assignment1;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			files = (
 				2A96E6E7280D5BC60095511B /* LaunchScreen.storyboard in Resources */,
 				2A96E6E4280D5BC60095511B /* Assets.xcassets in Resources */,
+				2A96E749280D5C6D0095511B /* SingleViewController.xib in Resources */,
 				2A96E6E2280D5BC30095511B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			files = (
 				2A96E6DF280D5BC30095511B /* ViewController.swift in Sources */,
 				2A96E6DB280D5BC30095511B /* AppDelegate.swift in Sources */,
+				2A96E748280D5C6D0095511B /* SingleViewController.swift in Sources */,
 				2A96E6DD280D5BC30095511B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
