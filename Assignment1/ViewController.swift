@@ -6,12 +6,17 @@
 //
 
 import UIKit
+protocol viewControllerDelegate {
+func getTabBarHeight()
+func setColor()
+}
 
 class ViewController: UITabBarController {
-
+    var tabBarHeight=CGFloat()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tabBar.backgroundColor = .white
         let viewController1=SingleViewController()
         viewController1.colour="I am green"
         viewController1.view.backgroundColor = .systemGreen
@@ -28,9 +33,10 @@ class ViewController: UITabBarController {
         viewController4.colour="I am Teal"
         viewController4.view.backgroundColor = .systemTeal
         let vc4=UINavigationController(rootViewController: viewController4)
-        let viewController5=SingleViewController()
-        viewController5.colour="I am Indigo"
-        viewController5.view.backgroundColor = .systemIndigo
+        let viewController5=FifthViewController()
+        viewController5.tabBarHeight=tabBar.frame.height * -1
+        //viewController5.colour="I am Indigo"
+        //viewController5.view.backgroundColor = .systemIndigo
         let vc5=UINavigationController(rootViewController: viewController5)
         
         
@@ -44,15 +50,48 @@ class ViewController: UITabBarController {
         vc2.title="Orange"
         vc3.title="Purple"
         vc4.title="Teal"
-        vc5.title="Indigo"
+        vc5.title="Root View Controller"
+        
         
         tabBar.tintColor = .systemBlue
-        tabBar.backgroundColor = .white
-        tabBar.barTintColor = .systemGray
+        
+        switch traitCollection.userInterfaceStyle {
+            case .light, .unspecified:
+            tabBar.backgroundColor = .white
+            case .dark:
+            tabBar.backgroundColor = .black
+        }
         setViewControllers([vc1,vc2,vc3,vc4,vc5], animated: true)
-        print(tabBar.items)
+        self.selectedIndex=4
+        
+        //print(tabBar.frame.height)
         
     }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        let userInterfaceStyle = traitCollection.userInterfaceStyle // Either .unspecified, .light, or .dark
+        // Update your user interface based on the appearance
+        switch userInterfaceStyle {
+            case .light, .unspecified:
+            tabBar.backgroundColor = .white
+            case .dark:
+            tabBar.backgroundColor = .black
+        }
+    }
+    
+    func getTabBarHeight()->CGFloat{
+        return tabBar.frame.height
+    }
+    func setColor(){
+        //tabBar.backgroundColor = .white
+        print(tabBar.alpha)
+        print("Set color called")
+    }
+//    func getHeight()->Int{
+//        
+//    }
+
 
 
 }
